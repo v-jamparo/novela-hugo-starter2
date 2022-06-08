@@ -40,3 +40,5 @@ fields:
   type: tag_list
   default: []
   label: Authors
+pages:
+- content/post/06-2022/testing-blog-post-1.md
