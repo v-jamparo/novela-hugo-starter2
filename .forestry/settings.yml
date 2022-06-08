@@ -6,9 +6,6 @@ webhook_url:
 sections:
 - type: heading
   label: Content
-- type: document
-  path: content/_index.md
-  label: Home
 - type: directory
   path: content/post
   label: Posts
@@ -16,6 +13,9 @@ sections:
   match: "**/*"
   templates:
   - default-msrc
+- type: document
+  path: content/_index.md
+  label: Home
 - type: heading
   label: Data
 - type: directory
