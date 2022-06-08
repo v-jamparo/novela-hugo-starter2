@@ -1,4 +1,48 @@
 ---
 label: Default MSRC
 hide_body: true
-fields: []
+fields:
+- name: tags
+  type: tag_list
+  default: []
+  label: tags
+  description: select the technology tag
+- name: highlight
+  type: boolean
+  label: highlight
+  description: Highlighting for code snippets
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: subtitle
+  description: Subtitle text
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: description
+  description: Description summary, shown in the summary section and metadata
+- name: author
+  type: select
+  default: MSRC
+  config:
+    required: true
+    options:
+    - aanchal
+    - lynn-miyashita
+    - MSRC
+    - bluehat
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: author
+  description: Select who is the author of this blog post
+  showOnly:
+    value: MSRC
