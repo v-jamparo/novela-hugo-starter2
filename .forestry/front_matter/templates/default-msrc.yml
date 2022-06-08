@@ -78,3 +78,5 @@ fields:
       file: 
       path: 
   label: categories
+pages:
+- content/post/06-2022/security-updates.md
