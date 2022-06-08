@@ -2,15 +2,13 @@
 label: Default MSRC
 hide_body: true
 fields:
-- name: tags
-  type: tag_list
-  default: []
-  label: tags
-  description: select the technology tag
-- name: highlight
-  type: boolean
-  label: highlight
-  description: Highlighting for code snippets
+- name: title
+  type: text
+  config:
+    required: true
+    min: 10
+  label: title
+  description: article title
 - name: subtitle
   type: text
   config:
@@ -27,6 +25,16 @@ fields:
       format: markdown
   label: description
   description: Description summary, shown in the summary section and metadata
+- name: publish_date
+  type: datetime
+  label: publish date
+  description: publish date
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: '2022-06-08T16:29:56+00:00'
 - name: author
   type: select
   default: MSRC
@@ -46,3 +54,27 @@ fields:
   description: Select who is the author of this blog post
   showOnly:
     value: MSRC
+- name: tags
+  type: tag_list
+  default: []
+  label: tags
+  description: select the technology tag
+- name: highlight
+  type: boolean
+  label: highlight
+  description: Highlighting for code snippets
+- name: categories
+  type: select
+  default: msrc
+  config:
+    required: true
+    options:
+    - msrc
+    - security
+    - azure
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: categories
